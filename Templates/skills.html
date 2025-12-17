@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %} 
+{% block content %}
+<h1>Skills</h1>
+<ul>
+    {% if skills %}
+    {% for skill in skills %}
+    <li>{{skill}}</li>
+    {% endfor %}
+    {% else %}
+    <h4>No skills available</h4>
+    {% endif %}
+</ul>
+{% endblock %}
