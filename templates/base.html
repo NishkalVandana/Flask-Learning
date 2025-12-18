@@ -17,6 +17,14 @@
         <a href="{{url_for('contact')}}">Contact</a>
     </nav>
     <hr>
+    {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    {% for msg in messages%}
+    <p>{{msg}}</p>
+    {%endfor%}
+    {%endif%}
+    {% endwith %}
+
     {% block content %}
     {% endblock %}
     <p>© 2025</p>
